@@ -9,9 +9,6 @@ import pandas as pd
 
 from datetime import datetime, timedelta
 
-
-
-
 app = FastAPI()
 
 # Define backend service URLs
@@ -24,55 +21,6 @@ logger.setLevel(logging.INFO)
 
 requests = []
 timestamps = []
-
-"""class Metrics:
-
-    def __init__(self):
-        self.error = 0
-        self.connections = 0
-        
-        with open("logistic_regression_model.pkl", "rb") as f:
-            self.loaded_model = pickle.load(f)
-
-    def increment_serrorrate(self):
-
-        self.error += 1
-        
-    def increment_connections(self):
-
-        self.connections += 1    
-
-    def get_serrorrate(self):
-
-        if self.connections != 0:
-            rate = self.error / self.connections 
-            
-        else:
-            rate = 10000
-        return float(rate)
-    
-    def get_connections(self):
-
-        return self.connections
-    
-    def predict(self):
-        
-        logger.info(f"connections: {self.connections}")
-        logger.info(f"serrorrate: {self.get_serrorrate()}")
-        
-        feature_names = ["count", "serrorrate"]  # Replace with your actual feature names
-        
-        input_features = pd.DataFrame([[self.connections, self.get_serrorrate()]], columns=feature_names)
-        
-        self.connections = 0
-        self.error = 0
-        
-        return self.loaded_model.predict(input_features)[0]
-
-
-# Create a global metrics instance
-metrics = Metrics()"""
-
 
 class CustomRequest:
     
