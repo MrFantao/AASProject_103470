@@ -1,0 +1,6 @@
+fastapi
+httpx
+uvicorn
+asyncio
+scikit-learn
+pandas
